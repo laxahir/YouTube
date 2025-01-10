@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import video1 from "../../src/assets/video.mp4";
 import like from "../../src/assets/like.png";
 import dislike from "../../src/assets/dislike.png";
 import share from "../../src/assets/share.png";
