@@ -18,29 +18,29 @@ function Recommended({ categoryId }) {
     }, []);
 
     return (
-        <div className="space-y-6"> {/* Add spacing between each video block */}
+        <div className="space-y-6">
             {apiData.map((item, index) => (
                 <Link
                     to={`/video/${item.snippet.categoryId}/${item.id}`}
                     key={index}
                     className="flex bg-gray-800 hover:bg-gray-700 rounded-lg overflow-hidden transition-all duration-200 ease-in-out"
                 >
-                    {/* Thumbnail Image */}
+
                     <img
                         src={item.snippet.thumbnails.medium.url}
                         alt={item.snippet.title}
                         className="w-52 h-40 object-cover"
                     />
 
-                    {/* Video Information */}
+
                     <div className="flex flex-col p-4 w-full">
-                        {/* Video Title */}
-                        <h4 className="text-lg font-semibold text-white truncate">{item.snippet.title}</h4> {/* Add truncate for longer titles */}
+
+                        <h4 className="text-lg font-semibold text-white truncate">{item.snippet.title}</h4>
 
                         <div className="mt-2">
-                            {/* Channel Title */}
+
                             <p className="text-sm text-gray-400">{item.snippet.channelTitle}</p>
-                            {/* View Count */}
+
                             <p className="text-sm text-gray-400">{value_converter(item.statistics.viewCount)} views</p>
                         </div>
                     </div>
